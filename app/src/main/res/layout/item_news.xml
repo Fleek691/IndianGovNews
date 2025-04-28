@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <View
+            android:id="@+id/sentimentIndicator"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="@color/secondary"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/newsImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/newsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/newsImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="News Title" />
+
+        <TextView
+            android:id="@+id/newsDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/newsImage"
+            app:layout_constraintTop_toBottomOf="@id/newsTitle"
+            tools:text="News description goes here..." />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/categoryChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toEndOf="@id/newsImage"
+            app:layout_constraintTop_toBottomOf="@id/newsDescription"
+            tools:text="Category" />
+
+        <TextView
+            android:id="@+id/newsSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newsDescription"
+            tools:text="Source" />
+
+        <TextView
+            android:id="@+id/newsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/newsImage"
+            app:layout_constraintTop_toBottomOf="@id/newsDescription"
+            tools:text="Mar 10, 2025" />
+
+        <TextView
+            android:id="@+id/newsLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/primary_light"
+            android:paddingHorizontal="4dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/newsDate"
+            app:layout_constraintTop_toTopOf="@id/newsSource"
+            tools:text="HI" />
+
+        <TextView
+            android:id="@+id/newsRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/accent"
+            android:paddingHorizontal="4dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/newsLanguage"
+            app:layout_constraintTop_toTopOf="@id/newsSource"
+            tools:text="Delhi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
